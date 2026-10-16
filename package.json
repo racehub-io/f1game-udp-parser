@@ -1,0 +1,78 @@
+{
+  "name": "@racehub-io/f1game-udp-parser",
+  "version": "0.4.12",
+  "description": "Rust built Node compatible udp parser for Codemaster's Formula 1 games",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/racehub-io/f1game-udp-parser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/racehub-io/f1game-udp-parser/issues"
+  },
+  "homepage": "https://github.com/racehub-io/f1game-udp-parser#readme",
+  "files": [
+    "native/src",
+    "native/Cargo.lock",
+    "native/Cargo.toml",
+    "native/build.rs",
+    "lib/"
+  ],
+  "author": "msansoni",
+  "contributors": [
+    {
+      "name": "Michael Sansoni",
+      "url": "michaelsansoni.com"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "neon-cli": "^0.3.3"
+  },
+  "scripts": {
+    "install": "neon build --release",
+    "check": "gts check",
+    "clean": "gts clean",
+    "test": "jest --detectOpenHandles",
+    "prebuild": "rm -rf ./lib",
+    "build": "tsc && neon build --release",
+    "postbuild": "mv ./lib/src/* ./lib/ && rm -rf ./lib/src",
+    "fix": "gts fix"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.4.1",
+    "gts": "^3.1.0",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.4",
+    "typescript": "^4.3.5"
+  },
+  "keywords": [
+    "automotive",
+    "grand prix",
+    "f12019",
+    "f1 2019",
+    "f12020",
+    "f1 2020",
+    "f12021",
+    "f1 2021",
+    "formula 1",
+    "f1",
+    "codemasters",
+    "udp",
+    "telemetry",
+    "racing",
+    "simracing",
+    "gaming",
+    "formula",
+    "ps4",
+    "xbox",
+    "xbox one",
+    "playstation",
+    "playstation 4",
+    "esports",
+    "e sports",
+    "e-sports",
+    "videogame"
+  ]
+}
